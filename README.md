@@ -4,21 +4,18 @@ talkto
 Add a [SimpleWebRTC](http://simplewebrtc.com) video hangout to your site *just by forking this repo
 and changing the CNAME.*
 
-## No, seriously:
+## Basic GitHub page
 
-__Step 1: Fork this repo__
+__Just fork this repo—and that's it.__
+It should immediately work at __yourusername.github.io/talkto__
 
-__Step 2: Change the CNAME__
+## Using on your own domain name
 
-## Well, okay. 
+- Change the CNAME to your own domain (or subdomain)
 
-So you *also* have to make sure a couple other little details are square.
+- At your DNS provider oint a __DNS CNAME record__ for your own domain to yourusername.github.io
 
-Namely:
-
-- Create a __gh-pages branch__ to enable GitHub Pages for your repo.
-
-- Point a __DNS CNAME record__ for your own domain to yourusername.github.io
+- Wait for GitHub pages to show up. (It'll 404 for a bit before it recognizes your CNAME)
 
 ---
 
