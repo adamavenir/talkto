@@ -16,9 +16,9 @@ So you *also* have to make sure a couple other little details are square.
 
 Namely:
 
-- Create a gh-pages branch to enable GitHub Pages for your repo.
+- Create a __gh-pages branch__ to enable GitHub Pages for your repo.
 
-- Point a CNAME record for your own domain to yourusername.github.io
+- Point a __DNS CNAME record__ for your own domain to yourusername.github.io
 
 ---
 
