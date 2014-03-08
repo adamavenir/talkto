@@ -4,12 +4,12 @@ talkto
 Add a [SimpleWebRTC](http://simplewebrtc.com) video hangout to your site *just by forking this repo
 and changing the CNAME.*
 
-## Using talkto as a basic GitHub.io page
+## As a basic GitHub.io page
 
 __Just fork this repo—and that's it.__
 It should immediately work at __yourusername.github.io/talkto__
 
-## Using talkto on your own domain name
+## On your own domain name
 
 - Change the CNAME to your own domain (or subdomain)
 
