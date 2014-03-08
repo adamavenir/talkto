@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Talk to Adam Brault</title>
+        <title>Talk to me</title>
         <meta name="viewport" content="width=device-width">
         <style>
             body { 
@@ -25,9 +25,10 @@
                 display: inline-block;
             }
 
-            .videos1 video { 
+            #remoteVideos.videos1 video { 
                 width: 100%;
                 max-width: 890px;
+                display: block;
             }
 
             .videos2 video {
@@ -57,7 +58,7 @@
             });
 
             webrtc.on('readyToCall', function () {
-                webrtc.joinRoom('adambrault.com');
+                webrtc.joinRoom(window.location.href);
                 setVideoCount();
             });
 
