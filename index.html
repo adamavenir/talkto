@@ -21,11 +21,23 @@
             }
 
             #remoteVideos video {
+                margin: 0 auto;
+                display: inline-block;
+            }
+
+            .videos1 video { 
                 width: 100%;
                 max-width: 890px;
-                margin: 0 auto;
-                display: block;
             }
+
+            .videos2 video {
+                width: 50%;
+            }
+
+            .videos3 video, .videos4 video {
+                height: 50%;
+            }
+
         </style>
     </head>
     <body>
@@ -36,6 +48,8 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="http://simplewebrtc.com/latest.js"></script>
         <script>
+            var videoCount;
+
             var webrtc = new SimpleWebRTC({
                 localVideoEl: 'localVideo',
                 remoteVideosEl: 'remoteVideos',
@@ -44,14 +58,18 @@
 
             webrtc.on('readyToCall', function () {
                 webrtc.joinRoom('adambrault.com');
+                setVideoCount();
             });
 
-            webrtc.on('videoAdded', function() {
-                alert('hi');
+            var setVideoCount = function () {
+                videoCount = $('#remoteVideos').children().length;
+                $('#remoteVideos').attr('class', 'videos' + videoCount)
+            }
+
+            webrtc.on('video*', function() {
+                setVideoCount();
             });
-            webrtc.on('videoRemoved', function() {
-                alert('bye');
-            });
+
         </script>
     </body>
 </html>
