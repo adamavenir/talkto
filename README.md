@@ -12,7 +12,7 @@ __Step 2: Change the CNAME__
 
 ## Well, okay. 
 
-You so *also* have to make sure a couple other details are square.
+So you *also* have to make sure a couple other little details are square.
 
 Namely:
 
