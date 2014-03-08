@@ -43,7 +43,14 @@
             });
 
             webrtc.on('readyToCall', function () {
-              webrtc.joinRoom('adambrault.com');
+                webrtc.joinRoom('adambrault.com');
+            });
+
+            webrtc.on('videoAdded', function() {
+                alert('hi');
+            });
+            webrtc.on('videoRemoved', function() {
+                alert('bye');
             });
         </script>
     </body>
