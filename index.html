@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Talk to Adam Brault</title>
+        <meta name="viewport" content="width=device-width">
+        <style>
+            body { 
+                margin: 0;
+                background: black;
+            }
+            #localVideo {
+                position: absolute;
+                width: 134px;
+                height: 100px;
+                top: 10px;
+                left: 10px;
+                border-top: 1px solid rgba(255,255,255,.7);
+                box-shadow: rgba(0,0,0,.5) 0 0 10px;
+                border-radius: 3px;
+            }
+
+            #remoteVideos video {
+                width: 100%;
+                max-width: 890px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <video id="localVideo"></video>
+            <div id="remoteVideos"></div>
+        </section>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://simplewebrtc.com/latest.js"></script>
+        <script>
+            var webrtc = new SimpleWebRTC({
+                localVideoEl: 'localVideo',
+                remoteVideosEl: 'remoteVideos',
+                autoRequestMedia: true
+            });
+
+            webrtc.on('readyToCall', function () {
+              webrtc.joinRoom('adambrault.com');
+            });
+        </script>
+    </body>
+</html>
